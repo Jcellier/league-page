@@ -2,6 +2,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import SwiperCore, { EffectFade, Mousewheel, Pagination } from "swiper";
 
+import { Welcome } from "../components/home-section";
+
 SwiperCore.use([Mousewheel, Pagination, EffectFade]);
 
 const swiperOptions = {
@@ -11,14 +13,16 @@ const swiperOptions = {
 	mousewheel: true,
 	pagination: true,
 	effect: "fade",
-	speed: 100,
+	speed: 1000,
 };
 
 const Home = () => {
 	return (
 		<>
 			<Swiper {...swiperOptions}>
-				<SwiperSlide>slide1</SwiperSlide>
+				<SwiperSlide>
+					{({ isActive }) => <Welcome isActive={isActive} />}
+				</SwiperSlide>
 				<SwiperSlide>slide2</SwiperSlide>
 			</Swiper>
 		</>

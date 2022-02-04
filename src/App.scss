@@ -1,6 +1,6 @@
 @use "./scss/" as *;
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@100;400;700&family=Rowdies:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap");
 
 * {
 	padding: 0;
@@ -14,6 +14,7 @@ html,
 body {
 	font-size: 100%;
 	position: relative;
+	height: 100%;
 }
 
 body {
@@ -99,5 +100,4 @@ iframe {
 .swiper,
 .swiper-slide {
 	height: 100%;
-	// @include flex(center, center);
 }
