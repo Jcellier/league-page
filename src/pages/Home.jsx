@@ -6,6 +6,7 @@ import { Welcome, Champion } from "../components/home-section";
 
 SwiperCore.use([Mousewheel, Pagination, EffectFade]);
 
+// To delete
 const swiperOptions = {
 	direction: "vertical",
 	slidesPerView: 1,
