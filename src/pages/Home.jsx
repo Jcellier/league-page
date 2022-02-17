@@ -2,11 +2,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import SwiperCore, { EffectFade, Mousewheel, Pagination } from "swiper";
 
-import { Welcome, Champion } from "../components/home-section";
+import { Welcome, Champion, ChampionDetail } from "../components/home-section";
+
+import { championsData } from "../assets/dummy";
 
 SwiperCore.use([Mousewheel, Pagination, EffectFade]);
 
-// To delete
 const swiperOptions = {
 	direction: "vertical",
 	slidesPerView: 1,
@@ -28,6 +29,9 @@ const Home = () => {
 					{({ isActive }) => <Champion isActive={isActive} />}
 				</SwiperSlide>
 			</Swiper>
+			{championsData.map((item, index) => (
+				<ChampionDetail key={index} item={item} id={index} />
+			))}
 		</>
 	);
 };
