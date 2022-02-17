@@ -19,7 +19,7 @@ const ChampionCard = (props) => {
 		newNode.style.zIndex = "102";
 
 		newNode.style.transition = "all 0.7s ease";
-		newNode.id = `champ-img-$(props.id)`;
+		newNode.id = `champ-img-${props.id}`;
 
 		setTimeout(() => {
 			newNode.style.width = "auto";
@@ -34,9 +34,7 @@ const ChampionCard = (props) => {
 		document
 			.querySelector(`#champ-detail-${props.id} iframe`)
 			.setAttribute("src", videoUrl);
-		document
-			.querySelector(`#champ-detail-${props.id} iframe`)
-			.classList.add("active");
+		document.querySelector(`#champ-detail-${props.id}`).classList.add("active");
 	};
 
 	return (
